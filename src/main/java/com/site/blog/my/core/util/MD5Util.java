@@ -1,5 +1,7 @@
 package com.site.blog.my.core.util;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 /**
@@ -45,4 +47,9 @@ public class MD5Util {
 
     private static final String hexDigits[] = {"0", "1", "2", "3", "4", "5",
             "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
+
+    public static void main(String[] args) {
+        String s = MD5Encode("zyb@19930428", StandardCharsets.UTF_8.name());
+        System.out.println(s);
+    }
 }
